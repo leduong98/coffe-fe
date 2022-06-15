@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import {Button} from "../button/Button";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -46,7 +47,7 @@ function Header() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Services
+                Menu
               </Link>
             </li>
             <li className='nav-item'>
@@ -55,7 +56,7 @@ function Header() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Products
+                Cart
               </Link>
             </li>
 
@@ -69,6 +70,7 @@ function Header() {
               </Link>
             </li>
           </ul>
+          {button && <Button buttonStyle='btn--outline'>Login</Button>}
         </div>
       </nav>
     </>
